@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weekly Standup</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .edit {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="container-fluid  text-center">
+      <h1>Weekly Standup</h1>
+      <h4>
+        Quote of the week<input
+          type="text"
+          id="quote"
+          class="edit text-center text-primary text-muted"
+        /><button id="quotechang" class="btn btn-success">update</button>
+      </h4>
+      <table id="weeklyTable" class="table table-striped w-75 mx-auto ">
+        <tr class="thead-dark row">
+          <th class="col-2">Name</th>
+          <th class="col-4">Last Week</th>
+          <th class="col-4">This Week</th>
+          <th class="col-2">Update</th>
+        </tr>
+      </table>
+
+      <div>
+        <h4>
+          Discussion topics:
+        </h4>
+
+        <input
+          type="text"
+          id="topics"
+          class="edit text-center text-primary text-muted"
+        /><button id="discussion" class="btn btn-success">update</button>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="javascripts/edit.js"></script>
+  </body>
+</html>
+
+<!-- update the json api -->
+<!-- $.ajax({
+    url:"https://api.myjson.com/bins/:id",
+    type:"PUT",
+    data:'{"key_updated":"value_updated"}',
+    contentType:"application/json; charset=utf-8",
+    dataType:"json",
+    success: function(data, textStatus, jqXHR){
+
+    }
+});   -->
